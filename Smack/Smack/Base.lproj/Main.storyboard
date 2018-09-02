@@ -37,22 +37,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0d-CV-fic">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqT-61-WNI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-T9-NPa">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="6nY-FT-p71"/>
+                                            <constraint firstAttribute="height" constant="18" id="RTC-dd-0Di"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWG-cb-PZT">
+                                        <rect key="frame" x="161" y="45.5" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="1Au-nm-0lm"/>
+                                    <constraint firstItem="eWG-cb-PZT" firstAttribute="centerX" secondItem="DqT-61-WNI" secondAttribute="centerX" id="3oe-zC-euL"/>
+                                    <constraint firstAttribute="height" constant="77" id="HIK-r1-XgP"/>
+                                    <constraint firstItem="M1E-T9-NPa" firstAttribute="leading" secondItem="DqT-61-WNI" secondAttribute="leading" constant="12" id="RUG-YY-vhB"/>
+                                    <constraint firstItem="eWG-cb-PZT" firstAttribute="centerY" secondItem="M1E-T9-NPa" secondAttribute="centerY" id="TOh-hj-asY"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1E-T9-NPa" secondAttribute="bottom" constant="12" id="zvi-50-sXo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E0d-CV-fic" firstAttribute="trailing" secondItem="L96-Ze-eOn" secondAttribute="trailing" id="RwQ-5A-ILJ"/>
-                            <constraint firstItem="E0d-CV-fic" firstAttribute="top" secondItem="Lbm-QW-PGF" secondAttribute="top" id="WQ3-qU-Pel"/>
-                            <constraint firstItem="E0d-CV-fic" firstAttribute="leading" secondItem="L96-Ze-eOn" secondAttribute="leading" id="eug-IH-hw3"/>
+                            <constraint firstItem="L96-Ze-eOn" firstAttribute="trailing" secondItem="DqT-61-WNI" secondAttribute="trailing" id="5wd-gp-1kK"/>
+                            <constraint firstItem="DqT-61-WNI" firstAttribute="leading" secondItem="L96-Ze-eOn" secondAttribute="leading" id="Efs-yZ-Bil"/>
+                            <constraint firstItem="DqT-61-WNI" firstAttribute="top" secondItem="Lbm-QW-PGF" secondAttribute="top" id="MYl-6m-sc4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L96-Ze-eOn"/>
                     </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="M1E-T9-NPa" id="0VT-Jj-aV2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icU-Sf-cTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,4 +97,7 @@
             <point key="canvasLocation" x="953" y="-232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>
